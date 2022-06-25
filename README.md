@@ -1,5 +1,7 @@
 # pinia-websocket-project
 
+Using pinia's demo in vue-native-websocket-vue 3
+
 ## Project setup
 ```
 yarn install
