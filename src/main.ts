@@ -4,7 +4,7 @@ import { useSocketStoreWithOut } from "@/store/pinia/useSocketStore";
 import VueNativeSock from "vue-native-websocket-vue3";
 
 const app = createApp(App);
-const piniaSocketStore = useSocketStoreWithOut();
+const piniaSocketStore = useSocketStoreWithOut(app);
 app.mount("#app");
 // 使用VueNativeSock插件，并进行相关配置
 app.use(

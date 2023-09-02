@@ -1,5 +1,6 @@
+import { App } from "vue";
 import { defineStore } from "pinia";
-import { store } from "@/store/pinia/store";
+import { setupStore } from "@/store/pinia/store";
 import main from "@/main";
 import { SocketStore } from "@/type/PiniaType";
 
@@ -62,6 +63,7 @@ export const useSocketStore = defineStore({
 });
 
 // Need to be used outside the setup
-export function useSocketStoreWithOut() {
-  return useSocketStore(store);
+export function useSocketStoreWithOut(app: App<Element>) {
+  setupStore(app);
+  return useSocketStore();
 }
